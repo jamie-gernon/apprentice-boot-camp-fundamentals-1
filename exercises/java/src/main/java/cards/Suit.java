@@ -2,7 +2,7 @@ package cards;
 
 public class Suit {
 
-    String name;
+    private final String name;
 
     public Suit(String name) {
         this.name = name;
@@ -20,5 +20,9 @@ public class Suit {
                 return new Suit("spades");
             default: throw new IllegalArgumentException("Something went wrong " + name + "is not a valid suitName!");
         }
+    }
+
+    public String getSuitName() {
+        return this.name;
     }
 }

@@ -41,7 +41,7 @@ public class Cards {
                 default: throw new IllegalArgumentException("Something went wrong " + card.faceValue + "is not a valid faceValue!");
             }
 
-            result[cardNumber] = faceValueName + " of " + cardDeck.getCards()[cardNumber].suit.name;
+            result[cardNumber] = faceValueName + " of " + cardDeck.getCards()[cardNumber].suit.getSuitName();
             cardNumber++;
         }
 
