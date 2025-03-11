@@ -2,9 +2,13 @@ package cards;
 
 public class PlayingCardDeck {
 
-    PlayingCard[] cards;
+    private final PlayingCard[] cards ;
 
-    public PlayingCardDeck(PlayingCard[] cards){
-        this.cards = cards;
+    public PlayingCardDeck(){
+        this.cards = new PlayingCard[52];
+    }
+
+    public PlayingCard[] getCards(){
+        return this.cards;
     }
 }
