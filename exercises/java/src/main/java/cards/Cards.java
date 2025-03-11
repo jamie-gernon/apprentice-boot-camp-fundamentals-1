@@ -1,7 +1,5 @@
 package cards;
 
-import static cards.Suit.mapToSuitName;
-
 public class Cards {
     public static void main(String[] args) {
         Cards cards = new Cards();
@@ -14,12 +12,6 @@ public class Cards {
     public String[] getCards() {
         String[] result = new String[52];
         PlayingCardDeck cardDeck = new PlayingCardDeck();
-
-        for (int suit = 0; suit < 4; suit++) {
-            for (int faceValue = 0; faceValue < 13; faceValue++) {
-                cardDeck.getCards()[suit*13+faceValue] = new PlayingCard( faceValue, mapToSuitName(suit));
-            }
-        }
 
         int cardNumber = 0;
         for (PlayingCard card : cardDeck.getCards()) {
