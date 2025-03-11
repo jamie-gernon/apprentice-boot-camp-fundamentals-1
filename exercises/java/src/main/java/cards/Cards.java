@@ -1,5 +1,7 @@
 package cards;
 
+import static cards.Suit.mapToSuitName;
+
 public class Cards {
     public static void main(String[] args) {
         Cards cards = new Cards();
@@ -15,7 +17,7 @@ public class Cards {
 
         for (int suit = 0; suit < 4; suit++) {
             for (int faceValue = 0; faceValue < 13; faceValue++) {
-                deck[suit*13+faceValue] = new PlayingCard (faceValue, suit);
+                deck[suit*13+faceValue] = new PlayingCard( faceValue, mapToSuitName(suit));
             }
         }
 
@@ -39,16 +41,7 @@ public class Cards {
                 default: throw new IllegalArgumentException("Something went wrong " + card.faceValue + "is not a valid faceValue!");
             }
 
-            String suitName;
-            switch (card.suit){
-                case 0: suitName = "clubs"; break;
-                case 1: suitName = "diamonds"; break;
-                case 2: suitName = "hearts"; break;
-                case 3: suitName = "spades"; break;
-                default: throw new IllegalArgumentException("Something went wrong " + card.suit + "is not a valid suitName!");
-            }
-
-            result[cardNumber] = faceValueName + " of " + suitName;
+            result[cardNumber] = faceValueName + " of " + deck[cardNumber].suit.name;
             cardNumber++;
         }
 

@@ -2,10 +2,10 @@ package cards;
 
 public class PlayingCard {
 
-    int suit;
+    Suit suit;
     int faceValue;
 
-    public PlayingCard (int faceValue, int suit){
+    public PlayingCard (int faceValue, Suit suit){
         this.faceValue = faceValue;
         this.suit = suit;
     }
