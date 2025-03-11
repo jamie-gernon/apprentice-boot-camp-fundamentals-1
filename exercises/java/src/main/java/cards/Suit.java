@@ -4,25 +4,26 @@ public class Suit {
 
     private final String name;
 
-    public Suit(String name) {
-        this.name = name;
+    public Suit(int name) {
+        this.name = mapToSuitName(name);
     }
 
-    public static Suit mapToSuitName(int name) {
+    private String mapToSuitName(int name) {
         switch (name) {
             case 0:
-                return new Suit("clubs");
+                return "clubs";
             case 1:
-                return new Suit("diamonds");
+                return "diamonds";
             case 2:
-                return new Suit("hearts");
+                return "hearts";
             case 3:
-                return new Suit("spades");
+                return "spades";
             default: throw new IllegalArgumentException("Something went wrong " + name + "is not a valid suitName!");
         }
     }
 
-    public String getSuitName() {
+    @Override
+    public String toString() {
         return this.name;
     }
 }
