@@ -14,8 +14,8 @@ public class Cards {
         PlayingCardDeck deck = new PlayingCardDeck();
 
         int cardNumber = 0;
-        for (PlayingCard card : deck.getCards()) {
-            result[cardNumber] = card.toString();
+        for (String card : deck.getCards()) {
+            result[cardNumber] = card;
             cardNumber++;
         }
 
