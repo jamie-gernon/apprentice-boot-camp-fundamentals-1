@@ -3,15 +3,15 @@ package cards;
 import java.util.Collections;
 import java.util.List;
 
-public interface Deck {
+public abstract class Deck {
 
-    default void shuffle(){
+    void shuffle(){
         Collections.shuffle(getListOfCards());
     }
 
-    String[] getCards();
+    abstract String[] getCards();
 
-    Card deal();
+    abstract Card deal();
 
-    List<? extends Card> getListOfCards();
+    abstract List<? extends Card> getListOfCards();
 }

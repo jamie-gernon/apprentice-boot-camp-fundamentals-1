@@ -3,7 +3,7 @@ package cards;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayingCardDeck implements Deck {
+public class PlayingCardDeck extends Deck {
 
     private final List<PlayingCard> cards;
 

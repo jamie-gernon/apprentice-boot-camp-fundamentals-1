@@ -3,7 +3,7 @@ package cards;
 import java.util.ArrayList;
 import java.util.List;
 
-class AnimalDeck implements Deck {
+class AnimalDeck extends Deck {
 
     private final List<AnimalCard> cards;
 
