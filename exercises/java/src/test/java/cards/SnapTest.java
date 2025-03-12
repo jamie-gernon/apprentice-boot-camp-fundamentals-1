@@ -1,13 +1,27 @@
 package cards;
 
 import junit.framework.TestCase;
-import org.junit.Test;
 
 public class SnapTest extends TestCase {
 
-    @Test
-    public void whenSnapIsCalledCorrectlyAddsOnePoint() {
+    public void testWhenCardsAreEqual_snapShouldReturnTrue() {
 
+        AnimalCard previousCard = new AnimalCard(Animal.LION);
+        AnimalCard currentCard = new AnimalCard(Animal.LION);
+
+        boolean result = previousCard.snap(currentCard);
+
+        assertTrue(result);
+    }
+
+    public void testWhenCardsAreNotEqual_snapShouldReturnFalse() {
+
+        AnimalCard previousCard = new AnimalCard(Animal.LION);
+        AnimalCard currentCard = new AnimalCard(Animal.GORILLA);
+
+        boolean result = previousCard.snap(currentCard);
+
+        assertFalse(result);
     }
 
 }

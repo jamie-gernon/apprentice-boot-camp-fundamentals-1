@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Snap {
     private int player1Score;
     private int player2Score;
-    private final AnimalDeck deck;
+    private final Deck deck;
 
     Snap(AnimalDeck deck) {
         this.deck = deck;
