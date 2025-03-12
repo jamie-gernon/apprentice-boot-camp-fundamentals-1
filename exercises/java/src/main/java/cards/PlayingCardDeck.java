@@ -20,6 +20,7 @@ public class PlayingCardDeck extends Deck {
 
     @Override
     public String[] getCards() {
+
         String[] result = new String[52];
         for (int i = 0; i < 52; i++) {
             PlayingCard card = cards.get(i);

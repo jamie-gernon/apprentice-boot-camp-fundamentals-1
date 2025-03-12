@@ -5,15 +5,15 @@ import java.util.List;
 
 public abstract class Deck {
 
-    void shuffle(){
+    public void shuffle() {
         Collections.shuffle(getListOfCards());
     }
 
-    abstract String[] getCards();
-
-    Card deal() {
+    public Card deal() {
         return getListOfCards().remove(0);
     }
+
+    abstract String[] getCards();
 
     abstract List<? extends Card> getListOfCards();
 }
