@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Snap {
     private int player1Score;
     private int player2Score;
-    private AnimalDeck deck;
+    private final AnimalDeck deck;
 
     Snap(AnimalDeck deck) {
         this.deck = deck;
@@ -20,12 +20,12 @@ class Snap {
     void play() {
         Scanner scanner = new Scanner(System.in);
 
-        AnimalCard previousCard = null;
+        Card previousCard = null;
         while (deck.getCards().length > 0) {
-            AnimalCard currentCard = deck.deal();
+            Card currentCard = deck.deal();
             System.out.println(currentCard);
             String input = scanner.nextLine();
-            if (input.length() > 0 && input.charAt(0) == 'a') {
+            if (!input.isEmpty() && input.charAt(0) == 'a') {
                 if (currentCard.snap(previousCard)) {
                     System.out.println("SNAP! score Player 1");
                     player1Score++;
@@ -33,7 +33,7 @@ class Snap {
                     System.out.println("WRONG! deducting score from Player 1");
                     player1Score--;
                 }
-            } else if (input.length() > 0 && input.charAt(0) == 'l') {
+            } else if (!input.isEmpty() && input.charAt(0) == 'l') {
                 if (currentCard.snap(previousCard)) {
                     System.out.println("SNAP! scorePlayer 2");
                     player2Score++;
