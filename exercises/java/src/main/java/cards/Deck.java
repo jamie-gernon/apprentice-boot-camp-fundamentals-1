@@ -11,7 +11,9 @@ public abstract class Deck {
 
     abstract String[] getCards();
 
-    abstract Card deal();
+    Card deal() {
+        return getListOfCards().remove(0);
+    }
 
     abstract List<? extends Card> getListOfCards();
 }

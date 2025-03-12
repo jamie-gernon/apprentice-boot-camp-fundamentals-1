@@ -29,11 +29,6 @@ public class PlayingCardDeck extends Deck {
     }
 
     @Override
-    public PlayingCard deal() {
-        return cards.remove(0);
-    }
-
-    @Override
     public List<PlayingCard> getListOfCards() {
         return cards;
     }
