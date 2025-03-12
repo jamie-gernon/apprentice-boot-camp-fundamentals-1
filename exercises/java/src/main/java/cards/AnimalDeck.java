@@ -1,7 +1,6 @@
 package cards;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 class AnimalDeck implements Deck {
@@ -17,11 +16,6 @@ class AnimalDeck implements Deck {
     }
 
     @Override
-    public void shuffle() {
-        Collections.shuffle(cards);
-    }
-
-    @Override
     public String[] getCards() {
         String[] result = new String[cards.size()];
         for (int i = 0; i < cards.size(); i++) {
@@ -34,5 +28,10 @@ class AnimalDeck implements Deck {
     @Override
     public AnimalCard deal() {
         return cards.remove(0);
+    }
+
+    @Override
+    public List<AnimalCard> getListOfCards() {
+        return cards;
     }
 }
