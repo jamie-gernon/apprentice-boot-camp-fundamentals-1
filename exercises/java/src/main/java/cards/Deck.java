@@ -6,5 +6,5 @@ public interface Deck {
 
     String[] getCards();
 
-    AnimalCard deal();
+    Card deal();
 }
